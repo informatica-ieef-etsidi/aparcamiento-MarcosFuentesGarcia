@@ -13,7 +13,7 @@ int esMatriculaValida(char matricula[]);
 struct estructuraDePlaza {
 	int estado; // 0 - Libre / 1 - Ocupada
 	char tipoDeVehiculo;
-	char matricula[8]; // Formato de la matrÌcula: NNNNLLL
+	char matricula[8]; // Formato de la matr√≠cula: NNNNLLL
 };
 
 struct usuario {
@@ -54,13 +54,13 @@ void main() {
 
 						if (plaza[i].estado == 0) {
 
-							printf("\nIndique su tipo de vehÌculo 'M' (moto) o 'C' (coche): ");
+							printf("\nIndique su tipo de veh√≠culo 'M' (moto) o 'C' (coche): ");
 							scanf("%c", &plaza[i].tipoDeVehiculo);
 							getchar();
 
 							if (plaza[i].tipoDeVehiculo == 'c' || plaza[i].tipoDeVehiculo == 'C' || plaza[i].tipoDeVehiculo == 'm' || plaza[i].tipoDeVehiculo == 'M') {
 
-								printf("\nIndique su matrÌcula: ");
+								printf("\nIndique su matr√≠cula: ");
 								scanf("%s", matriculaIntroducida);
 								getchar();
 
@@ -69,14 +69,14 @@ void main() {
 									strcpy(plaza[i].matricula, matriculaIntroducida);
 									numeroDePlazasLibres = numeroDePlazasLibres - 1;
 									plaza[i].estado = 1;
-									printf("\nSu vehÌculo ocupa la plaza %d", i);
+									printf("\nSu veh√≠culo ocupa la plaza %d", i);
 									break;
 
 								}
 
 								else {
 
-									printf("\nLa matrÌcula introducida no es v·lida.");
+									printf("\nLa matr√≠cula introducida no es v√°lida.");
 									break;
 
 								}
@@ -85,7 +85,7 @@ void main() {
 
 							else if (plaza[i].tipoDeVehiculo != 'c' && plaza[i].tipoDeVehiculo != 'C' && plaza[i].tipoDeVehiculo != 'm' && plaza[i].tipoDeVehiculo != 'M') {
 
-								printf("\nLa opciÛn introducida no es v·lida.");
+								printf("\nLa opci√≥n introducida no es v√°lida.");
 								break;
 
 							}
@@ -110,7 +110,7 @@ void main() {
 			case 'a':
 			case 'A':
 
-				printf("\nIndique su matrÌcula: ");
+				printf("\nIndique su matr√≠cula: ");
 				scanf("%s", matriculaIntroducida);
 				getchar();
 
@@ -137,7 +137,7 @@ void main() {
 
 				else {
 
-					printf("\nEl n˙mero de matrÌcula introducido no coincide.");
+					printf("\nEl n√∫mero de matr√≠cula introducido no coincide.");
 
 				}
 
@@ -181,7 +181,7 @@ void main() {
 			case 'b':
 			case 'B':
 
-				printf("\nIntroduzca la matrÌcula: ");
+				printf("\nIntroduzca la matr√≠cula: ");
 				scanf("%s", matriculaIntroducida);
 				getchar();
 
@@ -198,14 +198,14 @@ void main() {
 
 				if (aux2 == 1) {
 
-					printf("\nEl n˙mero de matrÌcula coincide con la de un vehÌculo del aparcamiento que ocupa la plaza %d.", i);
+					printf("\nEl n√∫mero de matr√≠cula coincide con la de un veh√≠culo del aparcamiento que ocupa la plaza %d.", i);
 					aux2 = 0;
 
 				}
 
 				else {
 
-					printf("\nEl n˙mero de matrÌcula no coincide con la de un vehÌculo del aparcamiento.");
+					printf("\nEl n√∫mero de matr√≠cula no coincide con la de un veh√≠culo del aparcamiento.");
 
 				}
 
@@ -223,7 +223,7 @@ void main() {
 
 			default:
 
-				printf("\nLa opciÛn introducida no es v·lida.\n");
+				printf("\nLa opci√≥n introducida no es v√°lida.\n");
 
 				printf("\n\n");
 				system("pause");
@@ -239,7 +239,7 @@ void main() {
 
 	else {
 
-		printf("\nEl usuario o la contraseÒa introducidos no son v·lidos.\n\n");
+		printf("\nEl usuario o la contrase√±a introducidos no son v√°lidos.\n\n");
 
 	}
 
@@ -254,7 +254,7 @@ char menu(char opcion) {
 	printf("\n  R - Reservar plaza");
 	printf("\n  A - Abandonar plaza");
 	printf("\n  E - Estado del aparcamiento");
-	printf("\n  B - Buscar vehÌculo por matrÌcula");
+	printf("\n  B - Buscar veh√≠culo por matr√≠cula");
 	printf("\n  S - Salir\n\n");
 	scanf("%c", &opcion);
 	getchar();
@@ -267,7 +267,7 @@ int existeUsuario(struct usuario usuarioValido, char username[], char password[]
 
 	printf("\nIntroduzca su usuario: ");
 	scanf("%s", username);
-	printf("\nIntroduzca su contraseÒa: ");
+	printf("\nIntroduzca su contrase√±a: ");
 	scanf("%s", password);
 	getchar();
 
