@@ -26,8 +26,6 @@ void recuento(struct plaza [], int , int *,int *);
 void inicializar(struct plaza [], int);
 int buscarPlazaLibre(struct plaza [], int, char);
 int buscarVehiculo(struct plaza [], int , char []);
-void leerFichero (char [],struct plaza [], int *);
-void salvarFichero (char [],struct plaza [], int );
 
 int main(int argc, char *argv[]) 
 {
